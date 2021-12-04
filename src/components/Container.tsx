@@ -1,10 +1,16 @@
 import { FC } from 'react'
-import Header from './Header'
+import { Router, ReactLocation, Outlet } from 'react-location'
+import Header from './Header/Header'
+
+const location = new ReactLocation()
 
 const Container: FC = () => {
   return (
     <>
-      <Header />
+      <Router location={location} routes={[]}>
+        <Header />
+        <Outlet />
+      </Router>
     </>
   )
 }
