@@ -1,3 +1,8 @@
 body {
-  background-color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+body > * {
+  font-family: 'Montserrat', sans-serif;
 }

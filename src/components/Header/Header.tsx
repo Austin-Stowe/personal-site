@@ -1,17 +1,9 @@
-import React, { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import { Link } from 'react-location'
 import routes from 'constants/routes'
 import './Header.css'
 
-interface IProps {
-  routes: {
-    title: string
-    component: FC
-  }[]
-}
-
 const Header: FC = () => {
-  console.log(Object.entries(routes))
   return (
     <div className="header">
       <div className="headerText">Austin Stowe</div>
