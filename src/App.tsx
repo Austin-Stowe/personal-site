@@ -7,12 +7,12 @@ import { CssBaseline } from '@mui/material'
 import Container from 'components/Container'
 
 function App() {
-  return (
-    <>
-      <CssBaseline />
-      <Container />
-    </>
-  )
+    return (
+        <>
+            <CssBaseline />
+            <Container />
+        </>
+    )
 }
 
 export default App
