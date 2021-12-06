@@ -3,6 +3,7 @@ import { FC } from 'react'
 import { Router, ReactLocation, Outlet, Route } from 'react-location'
 import { ReactLocationDevtools } from 'react-location-devtools'
 import Education from './Education/Education'
+import Footer from './Footer/Footer'
 import Header from './Header/Header'
 import HomePage from './HomePage/HomePage'
 import Personal from './Personal/Personal'
@@ -36,6 +37,7 @@ const Container: FC = () => {
                 <Header />
                 <Outlet />
                 <ReactLocationDevtools initialIsOpen={false} />
+                <Footer />
             </Router>
         </div>
     )

@@ -12,11 +12,13 @@ const HomePage: FC = () => {
                 />
             </div>
             <div className="textContent">
-                <h1>WELCOME TO MY SITE</h1>
-                <h2>
-                    Feel free to use the links above to dig into what makes me
-                    who I am!
-                </h2>
+                <div className="welcomeContent">
+                    <h1>WELCOME TO MY SITE</h1>
+                    <h2>
+                        Feel free to use the links above to dig into what makes
+                        me who I am!
+                    </h2>
+                </div>
             </div>
         </>
     )

@@ -26,6 +26,28 @@ body > * {
     color: steelblue;
 }
 
+.typing-demo {
+    animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    width: 12ch;
+    font-size: 3rem;
+    font-family: monospace;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 .siteName:hover + .navbar > .navMenu {
     width: 100%;
 }
@@ -83,21 +105,37 @@ body > * {
     grid-area: textContent;
 }
 
-.textContent > h1 {
+h1 {
     color: steelblue;
 }
 
-.textContent > h2 {
+h2 {
     color: slategray;
+}
+
+.welcomeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: auto;
+    margin-left: 25%;
 }
 
 .personalPhoto {
     border-radius: 50%;
     width: 100%;
+    box-shadow: 25px 25px 2px 0px steelblue;
 }
 
 .footer {
     grid-area: footer;
-    border-style: solid;
-    border-color: red;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
 }

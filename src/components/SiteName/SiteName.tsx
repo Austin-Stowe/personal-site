@@ -3,7 +3,11 @@ import { FC } from 'react'
 const SiteName: FC = () => {
     return (
         <>
-            <h1 className="siteName">Austin Stowe</h1>
+            <div className="siteName">
+                <div className="wrapper">
+                    <div className="typing-demo">Austin Stowe</div>
+                </div>
+            </div>
         </>
     )
 }
