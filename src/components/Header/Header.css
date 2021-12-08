@@ -1,0 +1,97 @@
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: fit-content;
+    position: fixed;
+    top: 0;
+    color: #f8f8f8;
+    background-color: #334a51;
+}
+
+.site-title {
+    font-family: 'Fira Mono', monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid;
+    width: 12.5ch;
+    animation: typing 2s steps(11), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+}
+
+.nav-list-item {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    background-color: transparent;
+    color: #96afb8;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 750ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    height: 100%;
+    display: table-cell;
+    border: 1px solid red;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.link:hover,
+.link:focus {
+    color: #62c6e1;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .site-title {
+        animation: none;
+        border-right: none;
+        width: 100%;
+        text-align: center;
+    }
+    .link {
+        animation: none;
+        opacity: 1;
+    }
+}
