@@ -1,21 +1,28 @@
 import { FC } from 'react'
 import { Router, ReactLocation, Outlet, Route } from 'react-location'
 import { ReactLocationDevtools } from 'react-location-devtools'
-import Header from './Header/Header'
+import routes from 'constants/routes'
+import Header from './Header'
+import HomePage from './HomePage'
 
 const location = new ReactLocation()
 
-const reactLocationRoutes: Route[] = []
+const reactLocationRoutes: Route[] = [
+    {
+        path: routes.HOME,
+        element: <HomePage />,
+    },
+]
 
 const Container: FC = () => {
     return (
-        <div className="container">
-            <Router location={location} routes={reactLocationRoutes}>
-                <Header />
+        <Router location={location} routes={reactLocationRoutes}>
+            <Header />
+            <div className="container">
                 <Outlet />
                 <ReactLocationDevtools initialIsOpen={false} />
-            </Router>
-        </div>
+            </div>
+        </Router>
     )
 }
 
