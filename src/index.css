@@ -4,12 +4,16 @@
     --text-secondary: #9978aa;
     --text-emphasis: #96afb8;
     --text-interactive: #62c6e1;
+    --header-height: 50px;
+    --mobile-max-width: 768px;
 }
+html,
 body {
     font-family: 'Fira Sans', sans-serif;
     box-sizing: border-box;
     font-weight: 200;
     padding: 0;
     margin: 0;
+    height: 100%;
     background: var(--bg-color);
 }

@@ -1,22 +1,15 @@
 import { FC } from 'react'
-import { Router, ReactLocation, Outlet, Route } from 'react-location'
+import { Router, ReactLocation, Outlet } from 'react-location'
 import { ReactLocationDevtools } from 'react-location-devtools'
-import routes from 'constants/routes'
 import Header from './Header'
-import HomePage from './HomePage'
+import './Container.css'
+import ApplicationRoutes from 'constants/ApplicationRoutes'
 
 const location = new ReactLocation()
 
-const reactLocationRoutes: Route[] = [
-    {
-        path: routes.HOME,
-        element: <HomePage />,
-    },
-]
-
 const Container: FC = () => {
     return (
-        <Router location={location} routes={reactLocationRoutes}>
+        <Router location={location} routes={ApplicationRoutes}>
             <Header />
             <div className="container">
                 <Outlet />

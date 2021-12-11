@@ -1,30 +1,35 @@
 import { FC } from 'react'
 import { Link } from 'react-location'
 
-import routes from 'constants/routes'
+import ApplicationRoutes from 'constants/ApplicationRoutes'
 import './Header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header: FC = () => {
     return (
-        <nav>
+        <div className="navbar">
             <div className="site-title">Austin Stowe</div>
             <div className="nav-list">
-                {Object.keys(routes).map((key, index) => (
-                    <div key={`${key}Link`} className="nav-list-item">
-                        <Link
-                            className="link"
-                            to={routes[key as keyof typeof routes]}
-                            style={{
-                                animationDelay: `${(index + 1) * 500 + 2250}ms`,
-                            }}
-                        >
-                            {key.charAt(0) +
-                                key.slice(1, key.length).toLowerCase()}
-                        </Link>
-                    </div>
-                ))}
+                {
+                    ApplicationRoutes.map((route, idx) => {
+                        return( 
+                        <div key={`${route.title}Link`} className="nav-list-item">
+                            <Link
+                                className="link"
+                                to={route.path}
+                                style={{animationDelay: `${(idx + 1) * 500 + 2250}ms`}}
+                            >
+                                <div className="navIcon">
+                                    <FontAwesomeIcon icon={route.icon} />
+                                </div>
+                                {route.title}
+                            </Link>
+                        </div>
+                        )
+                    })
+                }
             </div>
-        </nav>
+        </div>
     )
 }
 

@@ -1,13 +1,16 @@
-nav {
+.navbar {
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    max-height: fit-content;
+    height: var(--header-height);
     position: fixed;
     top: 0;
     color: var(--text-primary);
-    gap: 10rem;
+}
+
+.navbar > * {
+    margin: 0 var(--header-height);
 }
 
 .site-title {
@@ -35,20 +38,25 @@ nav {
 .nav-list {
     display: flex;
     width: 30%;
-    justify-content: flex-end;
     align-items: center;
     height: 100%;
+    flex: 1 1 0px;
     gap: 2rem;
 }
 
 .nav-list-item {
-    list-style: none;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    display: table;
+    flex: 1 1 0px;
 }
 
 .link {
+    display: table-cell;
+    vertical-align: middle;
     font-size: 1.2rem;
     text-decoration: none;
-    background-color: transparent;
     color: var(--text-secondary);
     opacity: 0;
     animation-name: fadeIn;
@@ -66,48 +74,35 @@ nav {
     }
 }
 
-.link:hover,
-.link:focus {
+.nav-list-item:hover > .link,
+.nav-list-item:focus > .link {
     color: var(--text-primary);
     font-style: italic;
 }
 
+.navIcon {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
-    nav > .nav-list {
-        margin: 0;
-        padding: 0;
-    }
-    .nav-list {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        gap: 0.5rem;
-    }
-    nav {
-        flex-direction: column;
-        justify-content: center;
-        align-items: space-around;
-        padding: 0;
-        margin: 0;
-        gap: 2rem;
+    .navbar {
+        top: auto;
+        bottom: 0;
     }
     .site-title {
-        animation: none;
-        border-right: none;
-        width: 100%;
-        text-align: center;
+        display: none;
     }
     .link {
+        font-size: 1rem;
         animation: none;
         opacity: 1;
     }
-    .nav-list-item {
+    .navIcon {
         display: block;
-        height: 100%;
-        width: 80%;
-        text-align: center;
-        font-size: 1.4rem;
-        border-radius: 2rem;
+        font-size: 1.5rem;
+    }
+    .nav-list-item:hover > .link,
+    .nav-list-item:focus > .link {
+        color: var(--text-primary);
     }
 }
