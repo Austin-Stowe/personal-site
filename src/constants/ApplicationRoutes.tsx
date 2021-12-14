@@ -1,5 +1,5 @@
 import { Route } from 'react-location'
-import { faHome, faPooStorm, IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { faHome, IconDefinition } from '@fortawesome/free-solid-svg-icons'
 
 type IApplicationRoute = Route & {
     title: string;
