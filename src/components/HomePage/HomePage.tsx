@@ -9,7 +9,9 @@ const HomePage: FC = () => {
                 <img alt="avatar" src={avatar} />
             </div>
             <div className="homePageContent">
-                <span>Welcome to my site</span>
+                <span>Welcome</span>
+                <span>to my</span>
+                <span>site</span>
             </div>
         </div>
     )

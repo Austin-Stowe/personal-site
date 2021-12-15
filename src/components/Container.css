@@ -1,12 +1,11 @@
 .container {
     margin-top: calc(var(--header-height) + 5px);
     height: calc(100vh - (var(--header-height) + 5px));
-    margin: auto 0;
+    width: 85vw;
 }
 @media only screen and (max-width: 768px) {
     .container {
         margin-top: 0;
         margin-bottom: calc(var(--header-height) + 5px);
-        margin: auto;
     }
 }
