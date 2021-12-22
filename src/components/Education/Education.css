@@ -1,0 +1,37 @@
+.educationContainer {
+    background-image: linear-gradient(
+        90deg,
+        var(--text-primary),
+        var(--text-interactive)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(var(--text-primary), var(--text-interactive))
+        100% 1;
+    padding: 0.5rem;
+}
+.schoolName {
+    font-size: 3rem;
+}
+.degree {
+    font-size: 1.5rem;
+}
+.time {
+    font-size: 1.5rem;
+}
+.projectTitle {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.projectDescription {
+    font-size: 1rem;
+}
+.projects > #projectsHeader {
+    margin: 2rem 0;
+    font-size: 2rem;
+}

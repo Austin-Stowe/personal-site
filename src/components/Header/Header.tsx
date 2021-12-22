@@ -10,14 +10,20 @@ const Header: FC = () => {
         <div className="navbar">
             <div className="site-title">Austin Stowe</div>
             <div className="nav-list">
-                {
-                    ApplicationRoutes.map((route, idx) => {
-                        return( 
-                        <div key={`${route.title}Link`} className="nav-list-item">
+                {ApplicationRoutes.map((route, idx) => {
+                    return (
+                        <div
+                            key={`${route.title}Link`}
+                            className="nav-list-item"
+                        >
                             <Link
                                 className="link"
                                 to={route.path}
-                                style={{animationDelay: `${(idx + 1) * 500 + 2250}ms`}}
+                                style={{
+                                    animationDelay: `${
+                                        (idx + 1) * 500 + 2250
+                                    }ms`,
+                                }}
                             >
                                 <div className="navIcon">
                                     <FontAwesomeIcon icon={route.icon} />
@@ -25,9 +31,8 @@ const Header: FC = () => {
                                 {route.title}
                             </Link>
                         </div>
-                        )
-                    })
-                }
+                    )
+                })}
             </div>
         </div>
     )

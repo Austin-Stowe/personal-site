@@ -9,9 +9,9 @@ const HomePage: FC = () => {
                 <img alt="avatar" src={avatar} />
             </div>
             <div className="homePageContent">
-                <span>Welcome</span>
-                <span>to my</span>
-                <span>site</span>
+                <span id="jobTitle">Full Stack Developer</span>
+                <span id="educationTitle">BS Mechanical Engineering</span>
+                <span>E.I.T Licensed in Washington State</span>
             </div>
         </div>
     )
