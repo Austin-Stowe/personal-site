@@ -8,20 +8,16 @@
     -webkit-background-clip: text;
     -moz-background-clip: text;
     color: transparent;
-    border-width: 1px;
-    border-style: solid;
-    border-image: linear-gradient(var(--text-primary), var(--text-interactive))
-        100% 1;
-    padding: 0.5rem;
+    margin-bottom: calc(var(--header-height) + 5px);
 }
 .schoolName {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .degree {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .time {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .projectTitle {
     font-style: italic;
@@ -32,6 +28,22 @@
     font-size: 1rem;
 }
 .projects > #projectsHeader {
-    margin: 2rem 0;
-    font-size: 2rem;
+    margin: 1.2rem 0;
+    font-size: 1.2rem;
+}
+.educationCard {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(
+            90deg,
+            var(--bg-color),
+            var(--text-primary),
+            var(--text-interactive),
+            var(--bg-color)
+        )
+        100% 1;
+}
+.project {
+    height: clamp(100px, max-content, 200px);
+    overflow-y: auto;
 }

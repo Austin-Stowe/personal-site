@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header: FC = () => {
     return (
+        <>
+        <div className="mobileSiteTitle">Austin Stowe</div>
         <div className="navbar">
             <div className="site-title">Austin Stowe</div>
             <div className="nav-list">
@@ -35,6 +37,7 @@ const Header: FC = () => {
                 })}
             </div>
         </div>
+        </>
     )
 }
 

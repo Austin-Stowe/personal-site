@@ -9,17 +9,17 @@
     gap: 3rem;
 }
 .avatar {
-    width: 40%;
+    width: 80%;
+    margin-inline: 2rem;
 }
 .avatar > img {
     width: 100%;
-    min-width: 350px;
     aspect-ratio: 1;
     border-radius: 50%;
     border-style: solid;
     border-width: 1px;
     border-color: #fff;
-    animation: animateBubbleSize 10s ease-in-out infinite alternate-reverse;
+    animation: animateBubbleSize 20s linear infinite alternate-reverse;
 }
 
 @keyframes animateBubbleSize {
@@ -27,19 +27,25 @@
         box-shadow: 10px 10px 10px 5px var(--text-interactive);
     }
     12% {
-        box-shadow: 5px 5px 10px 3.5px var(--text-interactive);
+        box-shadow: 8px 8px 10px 5px var(--text-interactive);
     }
     25% {
-        box-shadow: 10px 0px 10px 2px var(--text-interactive);
+        box-shadow: 5px 5px 10px 5px var(--text-interactive);
+    }
+    37% {
+        box-shadow: 3px 3px 10px 5px var(--text-interactive);
     }
     50% {
         box-shadow: 0 0 0 0 transparent;
     }
     62% {
-        box-shadow: -5px -5px 10px 3.5px var(--text-primary);
+        box-shadow: -3px -3px 10px 5px var(--text-primary);
     }
     75% {
-        box-shadow: -10px 0px 10px 2px var(--text-primary);
+        box-shadow: -5px -5px 10px 5px var(--text-primary);
+    }
+    87% {
+        box-shadow: -8px -8px 10px 5px var(--text-primary);
     }
     100% {
         box-shadow: -10px -10px 10px 5px var(--text-primary);
@@ -56,6 +62,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    gap: 3rem;
     animation-name: textShine;
     animation-duration: 10s;
     animation-direction: alternate;
@@ -798,15 +805,18 @@
     }
     .avatar {
         width: 100%;
+        margin-top: 1.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .avatar > img {
         width: 75%;
+        animation: none;
     }
     .homePageContent {
         width: 100%;
+        gap: 0.5rem;
         text-align: center;
     }
 }
