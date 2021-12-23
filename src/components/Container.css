@@ -1,0 +1,14 @@
+.container {
+    height: calc(100vh - (2 * var(--header-height)));
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(var(--header-height) + 5px);
+    overflow-y: auto;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin-bottom: calc(var(--header-height) + 5px);
+    }
+}

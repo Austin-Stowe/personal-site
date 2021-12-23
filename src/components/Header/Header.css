@@ -1,0 +1,153 @@
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+}
+
+.navbar > * {
+    margin: 0 var(--header-height);
+}
+
+.mobileSiteTitle {
+    display: none;
+}
+
+.site-title {
+    background-image: linear-gradient(
+        90deg,
+        var(--text-primary),
+        var(--text-interactive)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-family: 'Fira Mono', monospace;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid var(--text-interactive);
+    width: 12ch;
+    animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.nav-list {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    height: 100%;
+    flex: 1 1 0px;
+    gap: 2rem;
+}
+
+.nav-list-item {
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    display: table;
+    flex: 1 1 0px;
+}
+
+.link {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 750ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: color 325ms ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-list-item:hover > .link,
+.nav-list-item:focus > .link {
+    font-style: italic;
+    background-image: linear-gradient(
+        90deg,
+        var(--text-primary),
+        var(--text-interactive)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+}
+
+.navIcon {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        top: auto;
+        bottom: 0;
+    }
+    .site-title {
+        display: none;
+    }
+    .mobileSiteTitle {
+        display: flex;
+        background-image: linear-gradient(
+            90deg,
+            var(--text-primary),
+            var(--text-interactive)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        font-family: 'Fira Mono', monospace;
+        font-size: 2rem;
+        white-space: nowrap;
+        margin: 0 auto;
+        width: 100vw;
+        text-align: center;
+        overflow: hidden;
+        border-right: 1px solid var(--text-interactive);
+        width: 12ch;
+        animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
+    }
+    .link {
+        font-size: 1rem;
+        animation: none;
+        opacity: 1;
+    }
+    .navIcon {
+        display: block;
+        font-size: 1.5rem;
+    }
+    .nav-list-item:hover > .link,
+    .nav-list-item:focus > .link {
+        color: var(--text-primary);
+    }
+}

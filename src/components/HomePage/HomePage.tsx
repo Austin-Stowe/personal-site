@@ -1,26 +1,19 @@
 import { FC } from 'react'
-import photo from 'images/photo.jpg'
+import './HomePage.css'
+import avatar from 'images/photo.jpg'
 
 const HomePage: FC = () => {
     return (
-        <>
-            <div className="sidebar">
-                <img
-                    src={photo}
-                    alt="personalPhoto"
-                    className="personalPhoto"
-                />
+        <div className="homePageContainer">
+            <div className="avatar">
+                <img alt="avatar" src={avatar} />
             </div>
-            <div className="textContent">
-                <div className="welcomeContent">
-                    <h1>WELCOME TO MY SITE</h1>
-                    <h2>
-                        Feel free to use the links above to dig into what makes
-                        me who I am!
-                    </h2>
-                </div>
+            <div className="homePageContent">
+                <span id="jobTitle">Full Stack Developer</span>
+                <span id="educationTitle">BS Mechanical Engineering</span>
+                <span>E.I.T Licensed in Washington State</span>
             </div>
-        </>
+        </div>
     )
 }
 
